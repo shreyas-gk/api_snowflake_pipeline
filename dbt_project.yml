@@ -1,0 +1,19 @@
+name: 'api_snowflake_pipeline'
+version: '1.0'
+config-version: 2
+
+profile: 'api_snowflake_pipeline'  # must match your ~/.dbt/profiles.yml key
+
+model-paths: ["models"]
+
+target-path: "target"       # default compiled models path
+clean-targets:
+  - "target"
+  - "dbt_modules"
+
+models:
+  api_snowflake_pipeline:
+    staging:
+      +schema: staging       # Derived tables from raw source, light transformations
+    marts:
+      +schema: analytics     # Final, cleaned models for business use

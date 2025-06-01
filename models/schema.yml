@@ -1,0 +1,28 @@
+version: 2
+
+models:
+  - name: appointments_table
+    description: "Cleaned and transformed appointments data"
+    columns:
+      - name: appointment_id
+        description: "Unique identifier for each appointment"
+        tests:
+          - unique
+          - not_null
+      - name: patient_id
+        description: "Patient identifier associated with the appointment"
+        tests:
+          - not_null
+
+  - name: prescriptions_view
+    description: "View representing patient prescriptions"
+    columns:
+      - name: prescription_id
+        description: "Unique identifier for each prescription"
+        tests:
+          - unique
+          - not_null
+      - name: patient_id
+        description: "Patient identifier associated with the prescription"
+        tests:
+          - not_null

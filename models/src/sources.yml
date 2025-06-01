@@ -1,0 +1,68 @@
+version: 2
+
+sources:
+  - name: RAW             # Matches your Snowflake schema (uppercase)
+    schema: RAW           # Snowflake schema name for raw data
+    tables:
+      - name: patients
+        description: "Raw patients data loaded from external source"
+        columns:
+          - name: patient_id
+            description: "Unique identifier for each patient"
+            tests:
+              - unique
+              - not_null
+          - name: first_name
+            description: "Patient's first name"
+          - name: last_name
+            description: "Patient's last name"
+          - name: birthdate
+            description: "Patient's date of birth"
+          - name: email
+            description: "Patient's email address"
+          - name: phone
+            description: "Patient's phone number"
+          - name: address
+            description: "Patient's postal address"
+          - name: gender
+            description: "Patient's gender identity"
+
+      - name: appointments
+        description: "Raw appointments data for patients"
+        columns:
+          - name: appointment_id
+            description: "Unique identifier for each appointment"
+            tests:
+              - unique
+              - not_null
+          - name: patient_id
+            description: "ID of patient for the appointment"
+            tests:
+              - not_null
+          - name: appointment_date
+            description: "Date and time of the appointment"
+          - name: doctor_name
+            description: "Doctor assigned for the appointment"
+          - name: department
+            description: "Department of the appointment"
+
+      - name: prescriptions
+        description: "Raw prescriptions data"
+        columns:
+          - name: prescription_id
+            description: "Unique identifier for each prescription"
+            tests:
+              - unique
+              - not_null
+          - name: patient_id
+            description: "ID of the patient the prescription belongs to"
+            tests:
+              - not_null
+          - name: medication_name
+            description: "Name of the medication prescribed"
+          - name: dosage
+            description: "Dosage details of the medication"
+          - name: start_date
+            description: "Start date of the prescription"
+          - name: end_date
+            description: "End date of the prescription"
