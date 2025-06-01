@@ -2514,3 +2514,1081 @@ having count(*) > 1
 [0m01:17:49.218817 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x757824f88f10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x757824e6e1a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7577f64264a0>]}
 [0m01:17:49.219166 [debug] [MainThread]: Flushing usage events
 [0m01:17:49.454560 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m04:03:49.561681 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7cac42b3f7f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7cac41b94580>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7cac41b945e0>]}
+
+
+============================== 04:03:49.563748 | a89fd1c2-6b22-4acf-8439-7cfb2f94a01a ==============================
+[0m04:03:49.563748 [info ] [MainThread]: Running with dbt=1.9.6
+[0m04:03:49.564130 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'profiles_dir': '/root/.dbt', 'log_path': '/root/api_snowflake_pipeline/logs', 'debug': 'False', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'log_format': 'default', 'introspect': 'True', 'target_path': 'None', 'invocation_command': 'dbt docs generate', 'send_anonymous_usage_stats': 'True'}
+[0m04:03:50.061114 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'a89fd1c2-6b22-4acf-8439-7cfb2f94a01a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7cac44505060>]}
+[0m04:03:50.101263 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'a89fd1c2-6b22-4acf-8439-7cfb2f94a01a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7cac423cbca0>]}
+[0m04:03:50.101986 [info ] [MainThread]: Registered adapter: snowflake=1.9.4
+[0m04:03:50.198480 [debug] [MainThread]: checksum: dd6dc1e5178459e3de3bf2eeb7c86bed4be2266c311fce8c15d86eb4ff94e7ad, vars: {}, profile: , target: , version: 1.9.6
+[0m04:03:50.352279 [info ] [MainThread]: Unable to do partial parsing because a project config has changed
+[0m04:03:50.352768 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'a89fd1c2-6b22-4acf-8439-7cfb2f94a01a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7cac423c8970>]}
+[0m04:03:51.264028 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'a89fd1c2-6b22-4acf-8439-7cfb2f94a01a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7cac095d0130>]}
+[0m04:03:51.274968 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'a89fd1c2-6b22-4acf-8439-7cfb2f94a01a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7cac097464d0>]}
+[0m04:03:51.275416 [info ] [MainThread]: Found 9 models, 14 data tests, 3 sources, 476 macros
+[0m04:03:51.275718 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'a89fd1c2-6b22-4acf-8439-7cfb2f94a01a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7cac09747c10>]}
+[0m04:03:51.277456 [info ] [MainThread]: 
+[0m04:03:51.277767 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m04:03:51.278025 [info ] [MainThread]: 
+[0m04:03:51.278414 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m04:03:51.282402 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_MY_DATABASE_RAW_staging'
+[0m04:03:51.393153 [debug] [ThreadPool]: Using snowflake connection "list_MY_DATABASE_RAW_staging"
+[0m04:03:51.393621 [debug] [ThreadPool]: On list_MY_DATABASE_RAW_staging: /* {"app": "dbt", "dbt_version": "1.9.6", "profile_name": "api_snowflake_pipeline", "target_name": "dev", "connection_name": "list_MY_DATABASE_RAW_staging"} */
+alter session set quoted_identifiers_ignore_case = false;
+[0m04:03:51.393894 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m04:03:51.939372 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.545 seconds
+[0m04:03:51.943275 [debug] [ThreadPool]: Using snowflake connection "list_MY_DATABASE_RAW_staging"
+[0m04:03:51.943698 [debug] [ThreadPool]: On list_MY_DATABASE_RAW_staging: /* {"app": "dbt", "dbt_version": "1.9.6", "profile_name": "api_snowflake_pipeline", "target_name": "dev", "connection_name": "list_MY_DATABASE_RAW_staging"} */
+show objects in MY_DATABASE.RAW_staging
+    limit 10000
+    
+;
+[0m04:03:52.127640 [debug] [ThreadPool]: SQL status: SUCCESS 3 in 0.184 seconds
+[0m04:03:52.129583 [debug] [ThreadPool]: Using snowflake connection "list_MY_DATABASE_RAW_staging"
+[0m04:03:52.129945 [debug] [ThreadPool]: On list_MY_DATABASE_RAW_staging: /* {"app": "dbt", "dbt_version": "1.9.6", "profile_name": "api_snowflake_pipeline", "target_name": "dev", "connection_name": "list_MY_DATABASE_RAW_staging"} */
+alter session unset quoted_identifiers_ignore_case;
+[0m04:03:52.254121 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.124 seconds
+[0m04:03:52.255881 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_MY_DATABASE_RAW_staging, now list_MY_DATABASE_RAW_analytics)
+[0m04:03:52.259963 [debug] [ThreadPool]: Using snowflake connection "list_MY_DATABASE_RAW_analytics"
+[0m04:03:52.260438 [debug] [ThreadPool]: On list_MY_DATABASE_RAW_analytics: /* {"app": "dbt", "dbt_version": "1.9.6", "profile_name": "api_snowflake_pipeline", "target_name": "dev", "connection_name": "list_MY_DATABASE_RAW_analytics"} */
+alter session set quoted_identifiers_ignore_case = false;
+[0m04:03:52.398236 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.137 seconds
+[0m04:03:52.399682 [debug] [ThreadPool]: Using snowflake connection "list_MY_DATABASE_RAW_analytics"
+[0m04:03:52.399968 [debug] [ThreadPool]: On list_MY_DATABASE_RAW_analytics: /* {"app": "dbt", "dbt_version": "1.9.6", "profile_name": "api_snowflake_pipeline", "target_name": "dev", "connection_name": "list_MY_DATABASE_RAW_analytics"} */
+show objects in MY_DATABASE.RAW_analytics
+    limit 10000
+    
+;
+[0m04:03:52.529229 [debug] [ThreadPool]: SQL status: SUCCESS 3 in 0.129 seconds
+[0m04:03:52.530762 [debug] [ThreadPool]: Using snowflake connection "list_MY_DATABASE_RAW_analytics"
+[0m04:03:52.531064 [debug] [ThreadPool]: On list_MY_DATABASE_RAW_analytics: /* {"app": "dbt", "dbt_version": "1.9.6", "profile_name": "api_snowflake_pipeline", "target_name": "dev", "connection_name": "list_MY_DATABASE_RAW_analytics"} */
+alter session unset quoted_identifiers_ignore_case;
+[0m04:03:52.622213 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.091 seconds
+[0m04:03:52.623683 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_MY_DATABASE_RAW_analytics, now list_MY_DATABASE_RAW)
+[0m04:03:52.627566 [debug] [ThreadPool]: Using snowflake connection "list_MY_DATABASE_RAW"
+[0m04:03:52.627832 [debug] [ThreadPool]: On list_MY_DATABASE_RAW: /* {"app": "dbt", "dbt_version": "1.9.6", "profile_name": "api_snowflake_pipeline", "target_name": "dev", "connection_name": "list_MY_DATABASE_RAW"} */
+alter session set quoted_identifiers_ignore_case = false;
+[0m04:03:52.764904 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.137 seconds
+[0m04:03:52.766488 [debug] [ThreadPool]: Using snowflake connection "list_MY_DATABASE_RAW"
+[0m04:03:52.766834 [debug] [ThreadPool]: On list_MY_DATABASE_RAW: /* {"app": "dbt", "dbt_version": "1.9.6", "profile_name": "api_snowflake_pipeline", "target_name": "dev", "connection_name": "list_MY_DATABASE_RAW"} */
+show objects in MY_DATABASE.RAW
+    limit 10000
+    
+;
+[0m04:03:52.894937 [debug] [ThreadPool]: SQL status: SUCCESS 9 in 0.128 seconds
+[0m04:03:52.896746 [debug] [ThreadPool]: Using snowflake connection "list_MY_DATABASE_RAW"
+[0m04:03:52.897070 [debug] [ThreadPool]: On list_MY_DATABASE_RAW: /* {"app": "dbt", "dbt_version": "1.9.6", "profile_name": "api_snowflake_pipeline", "target_name": "dev", "connection_name": "list_MY_DATABASE_RAW"} */
+alter session unset quoted_identifiers_ignore_case;
+[0m04:03:53.086159 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.189 seconds
+[0m04:03:53.089706 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'a89fd1c2-6b22-4acf-8439-7cfb2f94a01a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7cac09745f90>]}
+[0m04:03:53.093764 [debug] [Thread-1 (]: Began running node model.api_snowflake_pipeline.appointments
+[0m04:03:53.094205 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_MY_DATABASE_RAW, now model.api_snowflake_pipeline.appointments)
+[0m04:03:53.094539 [debug] [Thread-1 (]: Began compiling node model.api_snowflake_pipeline.appointments
+[0m04:03:53.101448 [debug] [Thread-1 (]: Writing injected SQL for node "model.api_snowflake_pipeline.appointments"
+[0m04:03:53.102056 [debug] [Thread-1 (]: Began executing node model.api_snowflake_pipeline.appointments
+[0m04:03:53.102659 [debug] [Thread-1 (]: Finished running node model.api_snowflake_pipeline.appointments
+[0m04:03:53.103022 [debug] [Thread-1 (]: Began running node model.api_snowflake_pipeline.appointments_table
+[0m04:03:53.103513 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.api_snowflake_pipeline.appointments, now model.api_snowflake_pipeline.appointments_table)
+[0m04:03:53.103835 [debug] [Thread-1 (]: Began compiling node model.api_snowflake_pipeline.appointments_table
+[0m04:03:53.107249 [debug] [Thread-1 (]: Writing injected SQL for node "model.api_snowflake_pipeline.appointments_table"
+[0m04:03:53.107839 [debug] [Thread-1 (]: Began executing node model.api_snowflake_pipeline.appointments_table
+[0m04:03:53.108418 [debug] [Thread-1 (]: Finished running node model.api_snowflake_pipeline.appointments_table
+[0m04:03:53.108766 [debug] [Thread-1 (]: Began running node model.api_snowflake_pipeline.example_model
+[0m04:03:53.109672 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.api_snowflake_pipeline.appointments_table, now model.api_snowflake_pipeline.example_model)
+[0m04:03:53.110336 [debug] [Thread-1 (]: Began compiling node model.api_snowflake_pipeline.example_model
+[0m04:03:53.112120 [debug] [Thread-1 (]: Writing injected SQL for node "model.api_snowflake_pipeline.example_model"
+[0m04:03:53.112677 [debug] [Thread-1 (]: Began executing node model.api_snowflake_pipeline.example_model
+[0m04:03:53.113377 [debug] [Thread-1 (]: Finished running node model.api_snowflake_pipeline.example_model
+[0m04:03:53.113753 [debug] [Thread-1 (]: Began running node model.api_snowflake_pipeline.my_table
+[0m04:03:53.114263 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.api_snowflake_pipeline.example_model, now model.api_snowflake_pipeline.my_table)
+[0m04:03:53.114610 [debug] [Thread-1 (]: Began compiling node model.api_snowflake_pipeline.my_table
+[0m04:03:53.117295 [debug] [Thread-1 (]: Writing injected SQL for node "model.api_snowflake_pipeline.my_table"
+[0m04:03:53.117832 [debug] [Thread-1 (]: Began executing node model.api_snowflake_pipeline.my_table
+[0m04:03:53.118415 [debug] [Thread-1 (]: Finished running node model.api_snowflake_pipeline.my_table
+[0m04:03:53.118800 [debug] [Thread-1 (]: Began running node model.api_snowflake_pipeline.patients
+[0m04:03:53.119590 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.api_snowflake_pipeline.my_table, now model.api_snowflake_pipeline.patients)
+[0m04:03:53.120062 [debug] [Thread-1 (]: Began compiling node model.api_snowflake_pipeline.patients
+[0m04:03:53.122419 [debug] [Thread-1 (]: Writing injected SQL for node "model.api_snowflake_pipeline.patients"
+[0m04:03:53.122940 [debug] [Thread-1 (]: Began executing node model.api_snowflake_pipeline.patients
+[0m04:03:53.123502 [debug] [Thread-1 (]: Finished running node model.api_snowflake_pipeline.patients
+[0m04:03:53.123848 [debug] [Thread-1 (]: Began running node model.api_snowflake_pipeline.patients_clean
+[0m04:03:53.124419 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.api_snowflake_pipeline.patients, now model.api_snowflake_pipeline.patients_clean)
+[0m04:03:53.124860 [debug] [Thread-1 (]: Began compiling node model.api_snowflake_pipeline.patients_clean
+[0m04:03:53.128033 [debug] [Thread-1 (]: Writing injected SQL for node "model.api_snowflake_pipeline.patients_clean"
+[0m04:03:53.128549 [debug] [Thread-1 (]: Began executing node model.api_snowflake_pipeline.patients_clean
+[0m04:03:53.129117 [debug] [Thread-1 (]: Finished running node model.api_snowflake_pipeline.patients_clean
+[0m04:03:53.129522 [debug] [Thread-1 (]: Began running node model.api_snowflake_pipeline.prescription
+[0m04:03:53.129968 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.api_snowflake_pipeline.patients_clean, now model.api_snowflake_pipeline.prescription)
+[0m04:03:53.130299 [debug] [Thread-1 (]: Began compiling node model.api_snowflake_pipeline.prescription
+[0m04:03:53.132339 [debug] [Thread-1 (]: Writing injected SQL for node "model.api_snowflake_pipeline.prescription"
+[0m04:03:53.132826 [debug] [Thread-1 (]: Began executing node model.api_snowflake_pipeline.prescription
+[0m04:03:53.133386 [debug] [Thread-1 (]: Finished running node model.api_snowflake_pipeline.prescription
+[0m04:03:53.133752 [debug] [Thread-1 (]: Began running node model.api_snowflake_pipeline.prescriptions_view
+[0m04:03:53.134250 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.api_snowflake_pipeline.prescription, now model.api_snowflake_pipeline.prescriptions_view)
+[0m04:03:53.134578 [debug] [Thread-1 (]: Began compiling node model.api_snowflake_pipeline.prescriptions_view
+[0m04:03:53.136706 [debug] [Thread-1 (]: Writing injected SQL for node "model.api_snowflake_pipeline.prescriptions_view"
+[0m04:03:53.137257 [debug] [Thread-1 (]: Began executing node model.api_snowflake_pipeline.prescriptions_view
+[0m04:03:53.137848 [debug] [Thread-1 (]: Finished running node model.api_snowflake_pipeline.prescriptions_view
+[0m04:03:53.138209 [debug] [Thread-1 (]: Began running node test.api_snowflake_pipeline.source_not_null_RAW_appointments_appointment_id.d5986f0a85
+[0m04:03:53.138779 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.api_snowflake_pipeline.prescriptions_view, now test.api_snowflake_pipeline.source_not_null_RAW_appointments_appointment_id.d5986f0a85)
+[0m04:03:53.139160 [debug] [Thread-1 (]: Began compiling node test.api_snowflake_pipeline.source_not_null_RAW_appointments_appointment_id.d5986f0a85
+[0m04:03:53.148321 [debug] [Thread-1 (]: Writing injected SQL for node "test.api_snowflake_pipeline.source_not_null_RAW_appointments_appointment_id.d5986f0a85"
+[0m04:03:53.148818 [debug] [Thread-1 (]: Began executing node test.api_snowflake_pipeline.source_not_null_RAW_appointments_appointment_id.d5986f0a85
+[0m04:03:53.149435 [debug] [Thread-1 (]: Finished running node test.api_snowflake_pipeline.source_not_null_RAW_appointments_appointment_id.d5986f0a85
+[0m04:03:53.149804 [debug] [Thread-1 (]: Began running node test.api_snowflake_pipeline.source_not_null_RAW_appointments_patient_id.d53f370154
+[0m04:03:53.150240 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.api_snowflake_pipeline.source_not_null_RAW_appointments_appointment_id.d5986f0a85, now test.api_snowflake_pipeline.source_not_null_RAW_appointments_patient_id.d53f370154)
+[0m04:03:53.150604 [debug] [Thread-1 (]: Began compiling node test.api_snowflake_pipeline.source_not_null_RAW_appointments_patient_id.d53f370154
+[0m04:03:53.154625 [debug] [Thread-1 (]: Writing injected SQL for node "test.api_snowflake_pipeline.source_not_null_RAW_appointments_patient_id.d53f370154"
+[0m04:03:53.155234 [debug] [Thread-1 (]: Began executing node test.api_snowflake_pipeline.source_not_null_RAW_appointments_patient_id.d53f370154
+[0m04:03:53.155833 [debug] [Thread-1 (]: Finished running node test.api_snowflake_pipeline.source_not_null_RAW_appointments_patient_id.d53f370154
+[0m04:03:53.156208 [debug] [Thread-1 (]: Began running node test.api_snowflake_pipeline.source_not_null_RAW_patients_patient_id.bcc581dea1
+[0m04:03:53.156795 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.api_snowflake_pipeline.source_not_null_RAW_appointments_patient_id.d53f370154, now test.api_snowflake_pipeline.source_not_null_RAW_patients_patient_id.bcc581dea1)
+[0m04:03:53.157181 [debug] [Thread-1 (]: Began compiling node test.api_snowflake_pipeline.source_not_null_RAW_patients_patient_id.bcc581dea1
+[0m04:03:53.160640 [debug] [Thread-1 (]: Writing injected SQL for node "test.api_snowflake_pipeline.source_not_null_RAW_patients_patient_id.bcc581dea1"
+[0m04:03:53.161265 [debug] [Thread-1 (]: Began executing node test.api_snowflake_pipeline.source_not_null_RAW_patients_patient_id.bcc581dea1
+[0m04:03:53.161856 [debug] [Thread-1 (]: Finished running node test.api_snowflake_pipeline.source_not_null_RAW_patients_patient_id.bcc581dea1
+[0m04:03:53.162228 [debug] [Thread-1 (]: Began running node test.api_snowflake_pipeline.source_not_null_RAW_prescriptions_patient_id.4c8bfebe5f
+[0m04:03:53.162700 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.api_snowflake_pipeline.source_not_null_RAW_patients_patient_id.bcc581dea1, now test.api_snowflake_pipeline.source_not_null_RAW_prescriptions_patient_id.4c8bfebe5f)
+[0m04:03:53.163037 [debug] [Thread-1 (]: Began compiling node test.api_snowflake_pipeline.source_not_null_RAW_prescriptions_patient_id.4c8bfebe5f
+[0m04:03:53.167642 [debug] [Thread-1 (]: Writing injected SQL for node "test.api_snowflake_pipeline.source_not_null_RAW_prescriptions_patient_id.4c8bfebe5f"
+[0m04:03:53.168270 [debug] [Thread-1 (]: Began executing node test.api_snowflake_pipeline.source_not_null_RAW_prescriptions_patient_id.4c8bfebe5f
+[0m04:03:53.168833 [debug] [Thread-1 (]: Finished running node test.api_snowflake_pipeline.source_not_null_RAW_prescriptions_patient_id.4c8bfebe5f
+[0m04:03:53.169224 [debug] [Thread-1 (]: Began running node test.api_snowflake_pipeline.source_not_null_RAW_prescriptions_prescription_id.dd1470609a
+[0m04:03:53.169709 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.api_snowflake_pipeline.source_not_null_RAW_prescriptions_patient_id.4c8bfebe5f, now test.api_snowflake_pipeline.source_not_null_RAW_prescriptions_prescription_id.dd1470609a)
+[0m04:03:53.170046 [debug] [Thread-1 (]: Began compiling node test.api_snowflake_pipeline.source_not_null_RAW_prescriptions_prescription_id.dd1470609a
+[0m04:03:53.173515 [debug] [Thread-1 (]: Writing injected SQL for node "test.api_snowflake_pipeline.source_not_null_RAW_prescriptions_prescription_id.dd1470609a"
+[0m04:03:53.174042 [debug] [Thread-1 (]: Began executing node test.api_snowflake_pipeline.source_not_null_RAW_prescriptions_prescription_id.dd1470609a
+[0m04:03:53.174602 [debug] [Thread-1 (]: Finished running node test.api_snowflake_pipeline.source_not_null_RAW_prescriptions_prescription_id.dd1470609a
+[0m04:03:53.174965 [debug] [Thread-1 (]: Began running node test.api_snowflake_pipeline.source_unique_RAW_appointments_appointment_id.ae58c573fe
+[0m04:03:53.175425 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.api_snowflake_pipeline.source_not_null_RAW_prescriptions_prescription_id.dd1470609a, now test.api_snowflake_pipeline.source_unique_RAW_appointments_appointment_id.ae58c573fe)
+[0m04:03:53.175755 [debug] [Thread-1 (]: Began compiling node test.api_snowflake_pipeline.source_unique_RAW_appointments_appointment_id.ae58c573fe
+[0m04:03:53.180590 [debug] [Thread-1 (]: Writing injected SQL for node "test.api_snowflake_pipeline.source_unique_RAW_appointments_appointment_id.ae58c573fe"
+[0m04:03:53.181111 [debug] [Thread-1 (]: Began executing node test.api_snowflake_pipeline.source_unique_RAW_appointments_appointment_id.ae58c573fe
+[0m04:03:53.181708 [debug] [Thread-1 (]: Finished running node test.api_snowflake_pipeline.source_unique_RAW_appointments_appointment_id.ae58c573fe
+[0m04:03:53.182073 [debug] [Thread-1 (]: Began running node test.api_snowflake_pipeline.source_unique_RAW_patients_patient_id.65c1f2411d
+[0m04:03:53.182502 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.api_snowflake_pipeline.source_unique_RAW_appointments_appointment_id.ae58c573fe, now test.api_snowflake_pipeline.source_unique_RAW_patients_patient_id.65c1f2411d)
+[0m04:03:53.182901 [debug] [Thread-1 (]: Began compiling node test.api_snowflake_pipeline.source_unique_RAW_patients_patient_id.65c1f2411d
+[0m04:03:53.186281 [debug] [Thread-1 (]: Writing injected SQL for node "test.api_snowflake_pipeline.source_unique_RAW_patients_patient_id.65c1f2411d"
+[0m04:03:53.186792 [debug] [Thread-1 (]: Began executing node test.api_snowflake_pipeline.source_unique_RAW_patients_patient_id.65c1f2411d
+[0m04:03:53.187349 [debug] [Thread-1 (]: Finished running node test.api_snowflake_pipeline.source_unique_RAW_patients_patient_id.65c1f2411d
+[0m04:03:53.187704 [debug] [Thread-1 (]: Began running node test.api_snowflake_pipeline.source_unique_RAW_prescriptions_prescription_id.8de4fde4e3
+[0m04:03:53.188127 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.api_snowflake_pipeline.source_unique_RAW_patients_patient_id.65c1f2411d, now test.api_snowflake_pipeline.source_unique_RAW_prescriptions_prescription_id.8de4fde4e3)
+[0m04:03:53.188455 [debug] [Thread-1 (]: Began compiling node test.api_snowflake_pipeline.source_unique_RAW_prescriptions_prescription_id.8de4fde4e3
+[0m04:03:53.191591 [debug] [Thread-1 (]: Writing injected SQL for node "test.api_snowflake_pipeline.source_unique_RAW_prescriptions_prescription_id.8de4fde4e3"
+[0m04:03:53.192096 [debug] [Thread-1 (]: Began executing node test.api_snowflake_pipeline.source_unique_RAW_prescriptions_prescription_id.8de4fde4e3
+[0m04:03:53.192650 [debug] [Thread-1 (]: Finished running node test.api_snowflake_pipeline.source_unique_RAW_prescriptions_prescription_id.8de4fde4e3
+[0m04:03:53.193011 [debug] [Thread-1 (]: Began running node test.api_snowflake_pipeline.not_null_appointments_table_appointment_id.ceb82df9f8
+[0m04:03:53.193496 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.api_snowflake_pipeline.source_unique_RAW_prescriptions_prescription_id.8de4fde4e3, now test.api_snowflake_pipeline.not_null_appointments_table_appointment_id.ceb82df9f8)
+[0m04:03:53.193829 [debug] [Thread-1 (]: Began compiling node test.api_snowflake_pipeline.not_null_appointments_table_appointment_id.ceb82df9f8
+[0m04:03:53.196914 [debug] [Thread-1 (]: Writing injected SQL for node "test.api_snowflake_pipeline.not_null_appointments_table_appointment_id.ceb82df9f8"
+[0m04:03:53.197478 [debug] [Thread-1 (]: Began executing node test.api_snowflake_pipeline.not_null_appointments_table_appointment_id.ceb82df9f8
+[0m04:03:53.198051 [debug] [Thread-1 (]: Finished running node test.api_snowflake_pipeline.not_null_appointments_table_appointment_id.ceb82df9f8
+[0m04:03:53.198497 [debug] [Thread-1 (]: Began running node test.api_snowflake_pipeline.not_null_appointments_table_patient_id.95f7362346
+[0m04:03:53.198952 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.api_snowflake_pipeline.not_null_appointments_table_appointment_id.ceb82df9f8, now test.api_snowflake_pipeline.not_null_appointments_table_patient_id.95f7362346)
+[0m04:03:53.199278 [debug] [Thread-1 (]: Began compiling node test.api_snowflake_pipeline.not_null_appointments_table_patient_id.95f7362346
+[0m04:03:53.203251 [debug] [Thread-1 (]: Writing injected SQL for node "test.api_snowflake_pipeline.not_null_appointments_table_patient_id.95f7362346"
+[0m04:03:53.204752 [debug] [Thread-1 (]: Began executing node test.api_snowflake_pipeline.not_null_appointments_table_patient_id.95f7362346
+[0m04:03:53.205535 [debug] [Thread-1 (]: Finished running node test.api_snowflake_pipeline.not_null_appointments_table_patient_id.95f7362346
+[0m04:03:53.205931 [debug] [Thread-1 (]: Began running node test.api_snowflake_pipeline.unique_appointments_table_appointment_id.0292737db4
+[0m04:03:53.206433 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.api_snowflake_pipeline.not_null_appointments_table_patient_id.95f7362346, now test.api_snowflake_pipeline.unique_appointments_table_appointment_id.0292737db4)
+[0m04:03:53.206995 [debug] [Thread-1 (]: Began compiling node test.api_snowflake_pipeline.unique_appointments_table_appointment_id.0292737db4
+[0m04:03:53.212131 [debug] [Thread-1 (]: Writing injected SQL for node "test.api_snowflake_pipeline.unique_appointments_table_appointment_id.0292737db4"
+[0m04:03:53.212730 [debug] [Thread-1 (]: Began executing node test.api_snowflake_pipeline.unique_appointments_table_appointment_id.0292737db4
+[0m04:03:53.213382 [debug] [Thread-1 (]: Finished running node test.api_snowflake_pipeline.unique_appointments_table_appointment_id.0292737db4
+[0m04:03:53.213747 [debug] [Thread-1 (]: Began running node model.api_snowflake_pipeline.myview
+[0m04:03:53.214362 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.api_snowflake_pipeline.unique_appointments_table_appointment_id.0292737db4, now model.api_snowflake_pipeline.myview)
+[0m04:03:53.214694 [debug] [Thread-1 (]: Began compiling node model.api_snowflake_pipeline.myview
+[0m04:03:53.217309 [debug] [Thread-1 (]: Writing injected SQL for node "model.api_snowflake_pipeline.myview"
+[0m04:03:53.217880 [debug] [Thread-1 (]: Began executing node model.api_snowflake_pipeline.myview
+[0m04:03:53.218493 [debug] [Thread-1 (]: Finished running node model.api_snowflake_pipeline.myview
+[0m04:03:53.218859 [debug] [Thread-1 (]: Began running node test.api_snowflake_pipeline.not_null_prescriptions_view_patient_id.ae4275945b
+[0m04:03:53.219379 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.api_snowflake_pipeline.myview, now test.api_snowflake_pipeline.not_null_prescriptions_view_patient_id.ae4275945b)
+[0m04:03:53.219726 [debug] [Thread-1 (]: Began compiling node test.api_snowflake_pipeline.not_null_prescriptions_view_patient_id.ae4275945b
+[0m04:03:53.223088 [debug] [Thread-1 (]: Writing injected SQL for node "test.api_snowflake_pipeline.not_null_prescriptions_view_patient_id.ae4275945b"
+[0m04:03:53.223601 [debug] [Thread-1 (]: Began executing node test.api_snowflake_pipeline.not_null_prescriptions_view_patient_id.ae4275945b
+[0m04:03:53.224152 [debug] [Thread-1 (]: Finished running node test.api_snowflake_pipeline.not_null_prescriptions_view_patient_id.ae4275945b
+[0m04:03:53.224506 [debug] [Thread-1 (]: Began running node test.api_snowflake_pipeline.not_null_prescriptions_view_prescription_id.ee6120ab92
+[0m04:03:53.224942 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.api_snowflake_pipeline.not_null_prescriptions_view_patient_id.ae4275945b, now test.api_snowflake_pipeline.not_null_prescriptions_view_prescription_id.ee6120ab92)
+[0m04:03:53.225293 [debug] [Thread-1 (]: Began compiling node test.api_snowflake_pipeline.not_null_prescriptions_view_prescription_id.ee6120ab92
+[0m04:03:53.228413 [debug] [Thread-1 (]: Writing injected SQL for node "test.api_snowflake_pipeline.not_null_prescriptions_view_prescription_id.ee6120ab92"
+[0m04:03:53.228937 [debug] [Thread-1 (]: Began executing node test.api_snowflake_pipeline.not_null_prescriptions_view_prescription_id.ee6120ab92
+[0m04:03:53.229564 [debug] [Thread-1 (]: Finished running node test.api_snowflake_pipeline.not_null_prescriptions_view_prescription_id.ee6120ab92
+[0m04:03:53.229929 [debug] [Thread-1 (]: Began running node test.api_snowflake_pipeline.unique_prescriptions_view_prescription_id.b0d8176d64
+[0m04:03:53.230363 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.api_snowflake_pipeline.not_null_prescriptions_view_prescription_id.ee6120ab92, now test.api_snowflake_pipeline.unique_prescriptions_view_prescription_id.b0d8176d64)
+[0m04:03:53.230692 [debug] [Thread-1 (]: Began compiling node test.api_snowflake_pipeline.unique_prescriptions_view_prescription_id.b0d8176d64
+[0m04:03:53.233756 [debug] [Thread-1 (]: Writing injected SQL for node "test.api_snowflake_pipeline.unique_prescriptions_view_prescription_id.b0d8176d64"
+[0m04:03:53.234278 [debug] [Thread-1 (]: Began executing node test.api_snowflake_pipeline.unique_prescriptions_view_prescription_id.b0d8176d64
+[0m04:03:53.234837 [debug] [Thread-1 (]: Finished running node test.api_snowflake_pipeline.unique_prescriptions_view_prescription_id.b0d8176d64
+[0m04:03:53.235930 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m04:03:53.236233 [debug] [MainThread]: Connection 'test.api_snowflake_pipeline.unique_prescriptions_view_prescription_id.b0d8176d64' was left open.
+[0m04:03:53.236539 [debug] [MainThread]: On test.api_snowflake_pipeline.unique_prescriptions_view_prescription_id.b0d8176d64: Close
+[0m04:03:53.358725 [debug] [MainThread]: Command end result
+[0m04:03:53.447273 [debug] [MainThread]: Wrote artifact WritableManifest to /root/api_snowflake_pipeline/target/manifest.json
+[0m04:03:53.449278 [debug] [MainThread]: Wrote artifact SemanticManifest to /root/api_snowflake_pipeline/target/semantic_manifest.json
+[0m04:03:53.456376 [debug] [MainThread]: Wrote artifact RunExecutionResult to /root/api_snowflake_pipeline/target/run_results.json
+[0m04:03:53.460173 [debug] [MainThread]: Acquiring new snowflake connection 'generate_catalog'
+[0m04:03:53.460601 [info ] [MainThread]: Building catalog
+[0m04:03:53.471517 [debug] [ThreadPool]: Acquiring new snowflake connection 'MY_DATABASE.information_schema'
+[0m04:03:53.488525 [debug] [ThreadPool]: Using snowflake connection "MY_DATABASE.information_schema"
+[0m04:03:53.489603 [debug] [ThreadPool]: On MY_DATABASE.information_schema: /* {"app": "dbt", "dbt_version": "1.9.6", "profile_name": "api_snowflake_pipeline", "target_name": "dev", "connection_name": "MY_DATABASE.information_schema"} */
+with tables as (
+            select
+        table_catalog as "table_database",
+        table_schema as "table_schema",
+        table_name as "table_name",
+        case
+            when is_dynamic = 'YES' and table_type = 'BASE TABLE' THEN 'DYNAMIC TABLE'
+            else table_type
+        end as "table_type",
+        comment as "table_comment",
+
+        -- note: this is the _role_ that owns the table
+        table_owner as "table_owner",
+
+        'Clustering Key' as "stats:clustering_key:label",
+        clustering_key as "stats:clustering_key:value",
+        'The key used to cluster this table' as "stats:clustering_key:description",
+        (clustering_key is not null) as "stats:clustering_key:include",
+
+        'Row Count' as "stats:row_count:label",
+        row_count as "stats:row_count:value",
+        'An approximate count of rows in this table' as "stats:row_count:description",
+        (row_count is not null) as "stats:row_count:include",
+
+        'Approximate Size' as "stats:bytes:label",
+        bytes as "stats:bytes:value",
+        'Approximate size of the table as reported by Snowflake' as "stats:bytes:description",
+        (bytes is not null) as "stats:bytes:include",
+
+        'Last Modified' as "stats:last_modified:label",
+        to_varchar(convert_timezone('UTC', last_altered), 'yyyy-mm-dd HH24:MI'||'UTC') as "stats:last_modified:value",
+        'The timestamp for last update/change' as "stats:last_modified:description",
+        (last_altered is not null and table_type='BASE TABLE') as "stats:last_modified:include"
+    from MY_DATABASE.INFORMATION_SCHEMA.tables
+            where (
+                (
+                    
+    "table_schema" ilike 'RAW_staging' and upper("table_schema") = upper('RAW_staging')
+
+                    and 
+    "table_name" ilike 'prescription' and upper("table_name") = upper('prescription')
+
+                )
+             or 
+                (
+                    
+    "table_schema" ilike 'RAW_staging' and upper("table_schema") = upper('RAW_staging')
+
+                    and 
+    "table_name" ilike 'appointments' and upper("table_name") = upper('appointments')
+
+                )
+             or 
+                (
+                    
+    "table_schema" ilike 'RAW' and upper("table_schema") = upper('RAW')
+
+                    and 
+    "table_name" ilike 'patients' and upper("table_name") = upper('patients')
+
+                )
+             or 
+                (
+                    
+    "table_schema" ilike 'RAW_analytics' and upper("table_schema") = upper('RAW_analytics')
+
+                    and 
+    "table_name" ilike 'patients_clean' and upper("table_name") = upper('patients_clean')
+
+                )
+             or 
+                (
+                    
+    "table_schema" ilike 'RAW_staging' and upper("table_schema") = upper('RAW_staging')
+
+                    and 
+    "table_name" ilike 'patients' and upper("table_name") = upper('patients')
+
+                )
+             or 
+                (
+                    
+    "table_schema" ilike 'RAW' and upper("table_schema") = upper('RAW')
+
+                    and 
+    "table_name" ilike 'myview' and upper("table_name") = upper('myview')
+
+                )
+             or 
+                (
+                    
+    "table_schema" ilike 'RAW_analytics' and upper("table_schema") = upper('RAW_analytics')
+
+                    and 
+    "table_name" ilike 'prescriptions_view' and upper("table_name") = upper('prescriptions_view')
+
+                )
+             or 
+                (
+                    
+    "table_schema" ilike 'RAW_analytics' and upper("table_schema") = upper('RAW_analytics')
+
+                    and 
+    "table_name" ilike 'appointments_table' and upper("table_name") = upper('appointments_table')
+
+                )
+             or 
+                (
+                    
+    "table_schema" ilike 'RAW' and upper("table_schema") = upper('RAW')
+
+                    and 
+    "table_name" ilike 'example_model' and upper("table_name") = upper('example_model')
+
+                )
+             or 
+                (
+                    
+    "table_schema" ilike 'RAW' and upper("table_schema") = upper('RAW')
+
+                    and 
+    "table_name" ilike 'my_table' and upper("table_name") = upper('my_table')
+
+                )
+             or 
+                (
+                    
+    "table_schema" ilike 'RAW' and upper("table_schema") = upper('RAW')
+
+                    and 
+    "table_name" ilike 'appointments' and upper("table_name") = upper('appointments')
+
+                )
+             or 
+                (
+                    
+    "table_schema" ilike 'RAW' and upper("table_schema") = upper('RAW')
+
+                    and 
+    "table_name" ilike 'prescriptions' and upper("table_name") = upper('prescriptions')
+
+                )
+            )
+        ),
+        columns as (
+            select
+        table_catalog as "table_database",
+        table_schema as "table_schema",
+        table_name as "table_name",
+
+        column_name as "column_name",
+        ordinal_position as "column_index",
+        data_type as "column_type",
+        comment as "column_comment"
+    from MY_DATABASE.INFORMATION_SCHEMA.columns
+            where (
+                (
+                    
+    "table_schema" ilike 'RAW_staging' and upper("table_schema") = upper('RAW_staging')
+
+                    and 
+    "table_name" ilike 'prescription' and upper("table_name") = upper('prescription')
+
+                )
+             or 
+                (
+                    
+    "table_schema" ilike 'RAW_staging' and upper("table_schema") = upper('RAW_staging')
+
+                    and 
+    "table_name" ilike 'appointments' and upper("table_name") = upper('appointments')
+
+                )
+             or 
+                (
+                    
+    "table_schema" ilike 'RAW' and upper("table_schema") = upper('RAW')
+
+                    and 
+    "table_name" ilike 'patients' and upper("table_name") = upper('patients')
+
+                )
+             or 
+                (
+                    
+    "table_schema" ilike 'RAW_analytics' and upper("table_schema") = upper('RAW_analytics')
+
+                    and 
+    "table_name" ilike 'patients_clean' and upper("table_name") = upper('patients_clean')
+
+                )
+             or 
+                (
+                    
+    "table_schema" ilike 'RAW_staging' and upper("table_schema") = upper('RAW_staging')
+
+                    and 
+    "table_name" ilike 'patients' and upper("table_name") = upper('patients')
+
+                )
+             or 
+                (
+                    
+    "table_schema" ilike 'RAW' and upper("table_schema") = upper('RAW')
+
+                    and 
+    "table_name" ilike 'myview' and upper("table_name") = upper('myview')
+
+                )
+             or 
+                (
+                    
+    "table_schema" ilike 'RAW_analytics' and upper("table_schema") = upper('RAW_analytics')
+
+                    and 
+    "table_name" ilike 'prescriptions_view' and upper("table_name") = upper('prescriptions_view')
+
+                )
+             or 
+                (
+                    
+    "table_schema" ilike 'RAW_analytics' and upper("table_schema") = upper('RAW_analytics')
+
+                    and 
+    "table_name" ilike 'appointments_table' and upper("table_name") = upper('appointments_table')
+
+                )
+             or 
+                (
+                    
+    "table_schema" ilike 'RAW' and upper("table_schema") = upper('RAW')
+
+                    and 
+    "table_name" ilike 'example_model' and upper("table_name") = upper('example_model')
+
+                )
+             or 
+                (
+                    
+    "table_schema" ilike 'RAW' and upper("table_schema") = upper('RAW')
+
+                    and 
+    "table_name" ilike 'my_table' and upper("table_name") = upper('my_table')
+
+                )
+             or 
+                (
+                    
+    "table_schema" ilike 'RAW' and upper("table_schema") = upper('RAW')
+
+                    and 
+    "table_name" ilike 'appointments' and upper("table_name") = upper('appointments')
+
+                )
+             or 
+                (
+                    
+    "table_schema" ilike 'RAW' and upper("table_schema") = upper('RAW')
+
+                    and 
+    "table_name" ilike 'prescriptions' and upper("table_name") = upper('prescriptions')
+
+                )
+            )
+        )
+        select *
+    from tables
+    join columns using ("table_database", "table_schema", "table_name")
+    order by "column_index"
+[0m04:03:53.490259 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m04:03:58.087226 [debug] [ThreadPool]: SQL status: SUCCESS 74 in 4.597 seconds
+[0m04:03:58.113834 [debug] [MainThread]: Wrote artifact CatalogArtifact to /root/api_snowflake_pipeline/target/catalog.json
+[0m04:03:58.135413 [debug] [MainThread]: Wrote artifact WritableManifest to /root/api_snowflake_pipeline/target/manifest.json
+[0m04:03:58.137767 [debug] [MainThread]: Wrote artifact SemanticManifest to /root/api_snowflake_pipeline/target/semantic_manifest.json
+[0m04:03:58.138225 [info ] [MainThread]: Catalog written to /root/api_snowflake_pipeline/target/catalog.json
+[0m04:03:58.139226 [debug] [MainThread]: Resource report: {"command_name": "generate", "command_success": true, "command_wall_clock_time": 8.617683, "process_in_blocks": "2040", "process_kernel_time": 1.410644, "process_mem_max_rss": "221448", "process_out_blocks": "6984", "process_user_time": 3.12357}
+[0m04:03:58.139634 [debug] [MainThread]: Command `dbt docs generate` succeeded at 04:03:58.139555 after 8.62 seconds
+[0m04:03:58.139911 [debug] [MainThread]: Connection 'generate_catalog' was properly closed.
+[0m04:03:58.140146 [debug] [MainThread]: Connection 'MY_DATABASE.information_schema' was left open.
+[0m04:03:58.140388 [debug] [MainThread]: On MY_DATABASE.information_schema: Close
+[0m04:03:58.262318 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7cac42b3f7f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7cac0ba24be0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7cac0ba26260>]}
+[0m04:03:58.262956 [debug] [MainThread]: Flushing usage events
+[0m04:03:58.489072 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m04:04:19.302784 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7976c3477820>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7976c24f4520>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7976c24f4580>]}
+
+
+============================== 04:04:19.305084 | 38e4c26c-0482-4f0c-bd1d-fd0042638ce6 ==============================
+[0m04:04:19.305084 [info ] [MainThread]: Running with dbt=1.9.6
+[0m04:04:19.305570 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'debug': 'False', 'log_path': '/root/api_snowflake_pipeline/logs', 'fail_fast': 'False', 'profiles_dir': '/root/.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'introspect': 'True', 'static_parser': 'True', 'invocation_command': 'dbt docs serve', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m04:04:19.814087 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '38e4c26c-0482-4f0c-bd1d-fd0042638ce6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7976c4e69990>]}
+[0m04:04:19.854707 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '38e4c26c-0482-4f0c-bd1d-fd0042638ce6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7976906dda80>]}
+[0m04:04:20.620541 [error] [MainThread]: Encountered an error:
+[Errno 98] Address already in use
+[0m04:04:20.683749 [error] [MainThread]: Traceback (most recent call last):
+  File "/root/api_snowflake_pipeline/venv/lib/python3.10/site-packages/dbt/cli/requires.py", line 153, in wrapper
+    result, success = func(*args, **kwargs)
+  File "/root/api_snowflake_pipeline/venv/lib/python3.10/site-packages/dbt/cli/requires.py", line 103, in wrapper
+    return func(*args, **kwargs)
+  File "/root/api_snowflake_pipeline/venv/lib/python3.10/site-packages/dbt/cli/requires.py", line 235, in wrapper
+    return func(*args, **kwargs)
+  File "/root/api_snowflake_pipeline/venv/lib/python3.10/site-packages/dbt/cli/requires.py", line 264, in wrapper
+    return func(*args, **kwargs)
+  File "/root/api_snowflake_pipeline/venv/lib/python3.10/site-packages/dbt/cli/requires.py", line 311, in wrapper
+    return func(*args, **kwargs)
+  File "/root/api_snowflake_pipeline/venv/lib/python3.10/site-packages/dbt/cli/main.py", line 301, in docs_serve
+    results = task.run()
+  File "/root/api_snowflake_pipeline/venv/lib/python3.10/site-packages/dbt/task/docs/serve.py", line 24, in run
+    with socketserver.TCPServer((host, port), SimpleHTTPRequestHandler) as httpd:
+  File "/usr/lib/python3.10/socketserver.py", line 452, in __init__
+    self.server_bind()
+  File "/usr/lib/python3.10/socketserver.py", line 466, in server_bind
+    self.socket.bind(self.server_address)
+OSError: [Errno 98] Address already in use
+
+[0m04:04:20.685075 [debug] [MainThread]: Resource report: {"command_name": "serve", "command_success": false, "command_wall_clock_time": 1.4221544, "process_in_blocks": "56", "process_kernel_time": 1.261209, "process_mem_max_rss": "193224", "process_out_blocks": "3360", "process_user_time": 1.586683}
+[0m04:04:20.685756 [debug] [MainThread]: Command `dbt docs serve` failed at 04:04:20.685647 after 1.42 seconds
+[0m04:04:20.686060 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7976c3477820>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79769061de40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7976906dec20>]}
+[0m04:04:20.686359 [debug] [MainThread]: Flushing usage events
+[0m04:04:20.931721 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m04:05:55.155813 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x773df64737f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x773df54ec5b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x773df54ec610>]}
+
+
+============================== 04:05:55.158102 | 4f8fa7b4-5c33-47aa-97fc-d429fec097ac ==============================
+[0m04:05:55.158102 [info ] [MainThread]: Running with dbt=1.9.6
+[0m04:05:55.158518 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/root/.dbt', 'debug': 'False', 'fail_fast': 'False', 'log_path': '/root/api_snowflake_pipeline/logs', 'version_check': 'True', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'log_format': 'default', 'invocation_command': 'dbt docs generate', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m04:05:55.707604 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '4f8fa7b4-5c33-47aa-97fc-d429fec097ac', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x773df569fb80>]}
+[0m04:05:55.751099 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '4f8fa7b4-5c33-47aa-97fc-d429fec097ac', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x773df5d23e20>]}
+[0m04:05:55.751921 [info ] [MainThread]: Registered adapter: snowflake=1.9.4
+[0m04:05:55.846743 [debug] [MainThread]: checksum: dd6dc1e5178459e3de3bf2eeb7c86bed4be2266c311fce8c15d86eb4ff94e7ad, vars: {}, profile: , target: , version: 1.9.6
+[0m04:05:56.021550 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m04:05:56.021982 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m04:05:56.061654 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '4f8fa7b4-5c33-47aa-97fc-d429fec097ac', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x773dbf1bff10>]}
+[0m04:05:56.072185 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '4f8fa7b4-5c33-47aa-97fc-d429fec097ac', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x773dbf1bdc30>]}
+[0m04:05:56.072717 [info ] [MainThread]: Found 9 models, 14 data tests, 3 sources, 476 macros
+[0m04:05:56.073032 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '4f8fa7b4-5c33-47aa-97fc-d429fec097ac', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x773dbf1bde70>]}
+[0m04:05:56.075028 [info ] [MainThread]: 
+[0m04:05:56.075379 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m04:05:56.075651 [info ] [MainThread]: 
+[0m04:05:56.076096 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m04:05:56.080327 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_MY_DATABASE_RAW'
+[0m04:05:56.121481 [debug] [ThreadPool]: Using snowflake connection "list_MY_DATABASE_RAW"
+[0m04:05:56.121988 [debug] [ThreadPool]: On list_MY_DATABASE_RAW: /* {"app": "dbt", "dbt_version": "1.9.6", "profile_name": "api_snowflake_pipeline", "target_name": "dev", "connection_name": "list_MY_DATABASE_RAW"} */
+alter session set quoted_identifiers_ignore_case = false;
+[0m04:05:56.122270 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m04:05:56.762088 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.640 seconds
+[0m04:05:56.765970 [debug] [ThreadPool]: Using snowflake connection "list_MY_DATABASE_RAW"
+[0m04:05:56.766389 [debug] [ThreadPool]: On list_MY_DATABASE_RAW: /* {"app": "dbt", "dbt_version": "1.9.6", "profile_name": "api_snowflake_pipeline", "target_name": "dev", "connection_name": "list_MY_DATABASE_RAW"} */
+show objects in MY_DATABASE.RAW
+    limit 10000
+    
+;
+[0m04:05:56.952240 [debug] [ThreadPool]: SQL status: SUCCESS 9 in 0.185 seconds
+[0m04:05:56.954255 [debug] [ThreadPool]: Using snowflake connection "list_MY_DATABASE_RAW"
+[0m04:05:56.954582 [debug] [ThreadPool]: On list_MY_DATABASE_RAW: /* {"app": "dbt", "dbt_version": "1.9.6", "profile_name": "api_snowflake_pipeline", "target_name": "dev", "connection_name": "list_MY_DATABASE_RAW"} */
+alter session unset quoted_identifiers_ignore_case;
+[0m04:05:57.072004 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.117 seconds
+[0m04:05:57.074181 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_MY_DATABASE_RAW, now list_MY_DATABASE_RAW_analytics)
+[0m04:05:57.078019 [debug] [ThreadPool]: Using snowflake connection "list_MY_DATABASE_RAW_analytics"
+[0m04:05:57.078351 [debug] [ThreadPool]: On list_MY_DATABASE_RAW_analytics: /* {"app": "dbt", "dbt_version": "1.9.6", "profile_name": "api_snowflake_pipeline", "target_name": "dev", "connection_name": "list_MY_DATABASE_RAW_analytics"} */
+alter session set quoted_identifiers_ignore_case = false;
+[0m04:05:57.212188 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.133 seconds
+[0m04:05:57.213907 [debug] [ThreadPool]: Using snowflake connection "list_MY_DATABASE_RAW_analytics"
+[0m04:05:57.214249 [debug] [ThreadPool]: On list_MY_DATABASE_RAW_analytics: /* {"app": "dbt", "dbt_version": "1.9.6", "profile_name": "api_snowflake_pipeline", "target_name": "dev", "connection_name": "list_MY_DATABASE_RAW_analytics"} */
+show objects in MY_DATABASE.RAW_analytics
+    limit 10000
+    
+;
+[0m04:05:57.336332 [debug] [ThreadPool]: SQL status: SUCCESS 3 in 0.122 seconds
+[0m04:05:57.338181 [debug] [ThreadPool]: Using snowflake connection "list_MY_DATABASE_RAW_analytics"
+[0m04:05:57.338565 [debug] [ThreadPool]: On list_MY_DATABASE_RAW_analytics: /* {"app": "dbt", "dbt_version": "1.9.6", "profile_name": "api_snowflake_pipeline", "target_name": "dev", "connection_name": "list_MY_DATABASE_RAW_analytics"} */
+alter session unset quoted_identifiers_ignore_case;
+[0m04:05:57.595235 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.256 seconds
+[0m04:05:57.596887 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_MY_DATABASE_RAW_analytics, now list_MY_DATABASE_RAW_staging)
+[0m04:05:57.600366 [debug] [ThreadPool]: Using snowflake connection "list_MY_DATABASE_RAW_staging"
+[0m04:05:57.600749 [debug] [ThreadPool]: On list_MY_DATABASE_RAW_staging: /* {"app": "dbt", "dbt_version": "1.9.6", "profile_name": "api_snowflake_pipeline", "target_name": "dev", "connection_name": "list_MY_DATABASE_RAW_staging"} */
+alter session set quoted_identifiers_ignore_case = false;
+[0m04:05:57.696459 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.095 seconds
+[0m04:05:57.698083 [debug] [ThreadPool]: Using snowflake connection "list_MY_DATABASE_RAW_staging"
+[0m04:05:57.698410 [debug] [ThreadPool]: On list_MY_DATABASE_RAW_staging: /* {"app": "dbt", "dbt_version": "1.9.6", "profile_name": "api_snowflake_pipeline", "target_name": "dev", "connection_name": "list_MY_DATABASE_RAW_staging"} */
+show objects in MY_DATABASE.RAW_staging
+    limit 10000
+    
+;
+[0m04:05:57.812596 [debug] [ThreadPool]: SQL status: SUCCESS 3 in 0.114 seconds
+[0m04:05:57.814366 [debug] [ThreadPool]: Using snowflake connection "list_MY_DATABASE_RAW_staging"
+[0m04:05:57.814673 [debug] [ThreadPool]: On list_MY_DATABASE_RAW_staging: /* {"app": "dbt", "dbt_version": "1.9.6", "profile_name": "api_snowflake_pipeline", "target_name": "dev", "connection_name": "list_MY_DATABASE_RAW_staging"} */
+alter session unset quoted_identifiers_ignore_case;
+[0m04:05:57.954904 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.140 seconds
+[0m04:05:57.957256 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '4f8fa7b4-5c33-47aa-97fc-d429fec097ac', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x773df7d61450>]}
+[0m04:05:57.959887 [debug] [Thread-1 (]: Began running node model.api_snowflake_pipeline.appointments
+[0m04:05:57.960305 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_MY_DATABASE_RAW_staging, now model.api_snowflake_pipeline.appointments)
+[0m04:05:57.960640 [debug] [Thread-1 (]: Began compiling node model.api_snowflake_pipeline.appointments
+[0m04:05:57.967485 [debug] [Thread-1 (]: Writing injected SQL for node "model.api_snowflake_pipeline.appointments"
+[0m04:05:57.968057 [debug] [Thread-1 (]: Began executing node model.api_snowflake_pipeline.appointments
+[0m04:05:57.968661 [debug] [Thread-1 (]: Finished running node model.api_snowflake_pipeline.appointments
+[0m04:05:57.969051 [debug] [Thread-1 (]: Began running node model.api_snowflake_pipeline.appointments_table
+[0m04:05:57.969579 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.api_snowflake_pipeline.appointments, now model.api_snowflake_pipeline.appointments_table)
+[0m04:05:57.970007 [debug] [Thread-1 (]: Began compiling node model.api_snowflake_pipeline.appointments_table
+[0m04:05:57.972642 [debug] [Thread-1 (]: Writing injected SQL for node "model.api_snowflake_pipeline.appointments_table"
+[0m04:05:57.973154 [debug] [Thread-1 (]: Began executing node model.api_snowflake_pipeline.appointments_table
+[0m04:05:57.973763 [debug] [Thread-1 (]: Finished running node model.api_snowflake_pipeline.appointments_table
+[0m04:05:57.974110 [debug] [Thread-1 (]: Began running node model.api_snowflake_pipeline.example_model
+[0m04:05:57.974726 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.api_snowflake_pipeline.appointments_table, now model.api_snowflake_pipeline.example_model)
+[0m04:05:57.975536 [debug] [Thread-1 (]: Began compiling node model.api_snowflake_pipeline.example_model
+[0m04:05:57.978256 [debug] [Thread-1 (]: Writing injected SQL for node "model.api_snowflake_pipeline.example_model"
+[0m04:05:57.978750 [debug] [Thread-1 (]: Began executing node model.api_snowflake_pipeline.example_model
+[0m04:05:57.979309 [debug] [Thread-1 (]: Finished running node model.api_snowflake_pipeline.example_model
+[0m04:05:57.979653 [debug] [Thread-1 (]: Began running node model.api_snowflake_pipeline.my_table
+[0m04:05:57.980077 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.api_snowflake_pipeline.example_model, now model.api_snowflake_pipeline.my_table)
+[0m04:05:57.980402 [debug] [Thread-1 (]: Began compiling node model.api_snowflake_pipeline.my_table
+[0m04:05:57.982619 [debug] [Thread-1 (]: Writing injected SQL for node "model.api_snowflake_pipeline.my_table"
+[0m04:05:57.983099 [debug] [Thread-1 (]: Began executing node model.api_snowflake_pipeline.my_table
+[0m04:05:57.983648 [debug] [Thread-1 (]: Finished running node model.api_snowflake_pipeline.my_table
+[0m04:05:57.984017 [debug] [Thread-1 (]: Began running node model.api_snowflake_pipeline.patients
+[0m04:05:57.984630 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.api_snowflake_pipeline.my_table, now model.api_snowflake_pipeline.patients)
+[0m04:05:57.985410 [debug] [Thread-1 (]: Began compiling node model.api_snowflake_pipeline.patients
+[0m04:05:57.987753 [debug] [Thread-1 (]: Writing injected SQL for node "model.api_snowflake_pipeline.patients"
+[0m04:05:57.988254 [debug] [Thread-1 (]: Began executing node model.api_snowflake_pipeline.patients
+[0m04:05:57.988818 [debug] [Thread-1 (]: Finished running node model.api_snowflake_pipeline.patients
+[0m04:05:57.989196 [debug] [Thread-1 (]: Began running node model.api_snowflake_pipeline.patients_clean
+[0m04:05:57.989725 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.api_snowflake_pipeline.patients, now model.api_snowflake_pipeline.patients_clean)
+[0m04:05:57.990301 [debug] [Thread-1 (]: Began compiling node model.api_snowflake_pipeline.patients_clean
+[0m04:05:57.992507 [debug] [Thread-1 (]: Writing injected SQL for node "model.api_snowflake_pipeline.patients_clean"
+[0m04:05:57.992991 [debug] [Thread-1 (]: Began executing node model.api_snowflake_pipeline.patients_clean
+[0m04:05:57.993582 [debug] [Thread-1 (]: Finished running node model.api_snowflake_pipeline.patients_clean
+[0m04:05:57.993928 [debug] [Thread-1 (]: Began running node model.api_snowflake_pipeline.prescription
+[0m04:05:57.994339 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.api_snowflake_pipeline.patients_clean, now model.api_snowflake_pipeline.prescription)
+[0m04:05:57.994657 [debug] [Thread-1 (]: Began compiling node model.api_snowflake_pipeline.prescription
+[0m04:05:57.996743 [debug] [Thread-1 (]: Writing injected SQL for node "model.api_snowflake_pipeline.prescription"
+[0m04:05:57.997240 [debug] [Thread-1 (]: Began executing node model.api_snowflake_pipeline.prescription
+[0m04:05:57.997881 [debug] [Thread-1 (]: Finished running node model.api_snowflake_pipeline.prescription
+[0m04:05:57.998250 [debug] [Thread-1 (]: Began running node model.api_snowflake_pipeline.prescriptions_view
+[0m04:05:57.998713 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.api_snowflake_pipeline.prescription, now model.api_snowflake_pipeline.prescriptions_view)
+[0m04:05:57.999134 [debug] [Thread-1 (]: Began compiling node model.api_snowflake_pipeline.prescriptions_view
+[0m04:05:58.001768 [debug] [Thread-1 (]: Writing injected SQL for node "model.api_snowflake_pipeline.prescriptions_view"
+[0m04:05:58.002288 [debug] [Thread-1 (]: Began executing node model.api_snowflake_pipeline.prescriptions_view
+[0m04:05:58.002855 [debug] [Thread-1 (]: Finished running node model.api_snowflake_pipeline.prescriptions_view
+[0m04:05:58.003248 [debug] [Thread-1 (]: Began running node test.api_snowflake_pipeline.source_not_null_RAW_appointments_appointment_id.d5986f0a85
+[0m04:05:58.003721 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.api_snowflake_pipeline.prescriptions_view, now test.api_snowflake_pipeline.source_not_null_RAW_appointments_appointment_id.d5986f0a85)
+[0m04:05:58.004312 [debug] [Thread-1 (]: Began compiling node test.api_snowflake_pipeline.source_not_null_RAW_appointments_appointment_id.d5986f0a85
+[0m04:05:58.015384 [debug] [Thread-1 (]: Writing injected SQL for node "test.api_snowflake_pipeline.source_not_null_RAW_appointments_appointment_id.d5986f0a85"
+[0m04:05:58.016021 [debug] [Thread-1 (]: Began executing node test.api_snowflake_pipeline.source_not_null_RAW_appointments_appointment_id.d5986f0a85
+[0m04:05:58.016634 [debug] [Thread-1 (]: Finished running node test.api_snowflake_pipeline.source_not_null_RAW_appointments_appointment_id.d5986f0a85
+[0m04:05:58.017027 [debug] [Thread-1 (]: Began running node test.api_snowflake_pipeline.source_not_null_RAW_appointments_patient_id.d53f370154
+[0m04:05:58.017611 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.api_snowflake_pipeline.source_not_null_RAW_appointments_appointment_id.d5986f0a85, now test.api_snowflake_pipeline.source_not_null_RAW_appointments_patient_id.d53f370154)
+[0m04:05:58.017998 [debug] [Thread-1 (]: Began compiling node test.api_snowflake_pipeline.source_not_null_RAW_appointments_patient_id.d53f370154
+[0m04:05:58.021501 [debug] [Thread-1 (]: Writing injected SQL for node "test.api_snowflake_pipeline.source_not_null_RAW_appointments_patient_id.d53f370154"
+[0m04:05:58.022040 [debug] [Thread-1 (]: Began executing node test.api_snowflake_pipeline.source_not_null_RAW_appointments_patient_id.d53f370154
+[0m04:05:58.022608 [debug] [Thread-1 (]: Finished running node test.api_snowflake_pipeline.source_not_null_RAW_appointments_patient_id.d53f370154
+[0m04:05:58.022971 [debug] [Thread-1 (]: Began running node test.api_snowflake_pipeline.source_not_null_RAW_patients_patient_id.bcc581dea1
+[0m04:05:58.023530 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.api_snowflake_pipeline.source_not_null_RAW_appointments_patient_id.d53f370154, now test.api_snowflake_pipeline.source_not_null_RAW_patients_patient_id.bcc581dea1)
+[0m04:05:58.023876 [debug] [Thread-1 (]: Began compiling node test.api_snowflake_pipeline.source_not_null_RAW_patients_patient_id.bcc581dea1
+[0m04:05:58.027086 [debug] [Thread-1 (]: Writing injected SQL for node "test.api_snowflake_pipeline.source_not_null_RAW_patients_patient_id.bcc581dea1"
+[0m04:05:58.027589 [debug] [Thread-1 (]: Began executing node test.api_snowflake_pipeline.source_not_null_RAW_patients_patient_id.bcc581dea1
+[0m04:05:58.028155 [debug] [Thread-1 (]: Finished running node test.api_snowflake_pipeline.source_not_null_RAW_patients_patient_id.bcc581dea1
+[0m04:05:58.028510 [debug] [Thread-1 (]: Began running node test.api_snowflake_pipeline.source_not_null_RAW_prescriptions_patient_id.4c8bfebe5f
+[0m04:05:58.028957 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.api_snowflake_pipeline.source_not_null_RAW_patients_patient_id.bcc581dea1, now test.api_snowflake_pipeline.source_not_null_RAW_prescriptions_patient_id.4c8bfebe5f)
+[0m04:05:58.029578 [debug] [Thread-1 (]: Began compiling node test.api_snowflake_pipeline.source_not_null_RAW_prescriptions_patient_id.4c8bfebe5f
+[0m04:05:58.032933 [debug] [Thread-1 (]: Writing injected SQL for node "test.api_snowflake_pipeline.source_not_null_RAW_prescriptions_patient_id.4c8bfebe5f"
+[0m04:05:58.033570 [debug] [Thread-1 (]: Began executing node test.api_snowflake_pipeline.source_not_null_RAW_prescriptions_patient_id.4c8bfebe5f
+[0m04:05:58.034178 [debug] [Thread-1 (]: Finished running node test.api_snowflake_pipeline.source_not_null_RAW_prescriptions_patient_id.4c8bfebe5f
+[0m04:05:58.034611 [debug] [Thread-1 (]: Began running node test.api_snowflake_pipeline.source_not_null_RAW_prescriptions_prescription_id.dd1470609a
+[0m04:05:58.035065 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.api_snowflake_pipeline.source_not_null_RAW_prescriptions_patient_id.4c8bfebe5f, now test.api_snowflake_pipeline.source_not_null_RAW_prescriptions_prescription_id.dd1470609a)
+[0m04:05:58.035401 [debug] [Thread-1 (]: Began compiling node test.api_snowflake_pipeline.source_not_null_RAW_prescriptions_prescription_id.dd1470609a
+[0m04:05:58.038654 [debug] [Thread-1 (]: Writing injected SQL for node "test.api_snowflake_pipeline.source_not_null_RAW_prescriptions_prescription_id.dd1470609a"
+[0m04:05:58.039173 [debug] [Thread-1 (]: Began executing node test.api_snowflake_pipeline.source_not_null_RAW_prescriptions_prescription_id.dd1470609a
+[0m04:05:58.039727 [debug] [Thread-1 (]: Finished running node test.api_snowflake_pipeline.source_not_null_RAW_prescriptions_prescription_id.dd1470609a
+[0m04:05:58.040084 [debug] [Thread-1 (]: Began running node test.api_snowflake_pipeline.source_unique_RAW_appointments_appointment_id.ae58c573fe
+[0m04:05:58.040499 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.api_snowflake_pipeline.source_not_null_RAW_prescriptions_prescription_id.dd1470609a, now test.api_snowflake_pipeline.source_unique_RAW_appointments_appointment_id.ae58c573fe)
+[0m04:05:58.040828 [debug] [Thread-1 (]: Began compiling node test.api_snowflake_pipeline.source_unique_RAW_appointments_appointment_id.ae58c573fe
+[0m04:05:58.045702 [debug] [Thread-1 (]: Writing injected SQL for node "test.api_snowflake_pipeline.source_unique_RAW_appointments_appointment_id.ae58c573fe"
+[0m04:05:58.046227 [debug] [Thread-1 (]: Began executing node test.api_snowflake_pipeline.source_unique_RAW_appointments_appointment_id.ae58c573fe
+[0m04:05:58.046791 [debug] [Thread-1 (]: Finished running node test.api_snowflake_pipeline.source_unique_RAW_appointments_appointment_id.ae58c573fe
+[0m04:05:58.047149 [debug] [Thread-1 (]: Began running node test.api_snowflake_pipeline.source_unique_RAW_patients_patient_id.65c1f2411d
+[0m04:05:58.047574 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.api_snowflake_pipeline.source_unique_RAW_appointments_appointment_id.ae58c573fe, now test.api_snowflake_pipeline.source_unique_RAW_patients_patient_id.65c1f2411d)
+[0m04:05:58.047904 [debug] [Thread-1 (]: Began compiling node test.api_snowflake_pipeline.source_unique_RAW_patients_patient_id.65c1f2411d
+[0m04:05:58.051169 [debug] [Thread-1 (]: Writing injected SQL for node "test.api_snowflake_pipeline.source_unique_RAW_patients_patient_id.65c1f2411d"
+[0m04:05:58.051677 [debug] [Thread-1 (]: Began executing node test.api_snowflake_pipeline.source_unique_RAW_patients_patient_id.65c1f2411d
+[0m04:05:58.052234 [debug] [Thread-1 (]: Finished running node test.api_snowflake_pipeline.source_unique_RAW_patients_patient_id.65c1f2411d
+[0m04:05:58.052586 [debug] [Thread-1 (]: Began running node test.api_snowflake_pipeline.source_unique_RAW_prescriptions_prescription_id.8de4fde4e3
+[0m04:05:58.053013 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.api_snowflake_pipeline.source_unique_RAW_patients_patient_id.65c1f2411d, now test.api_snowflake_pipeline.source_unique_RAW_prescriptions_prescription_id.8de4fde4e3)
+[0m04:05:58.053374 [debug] [Thread-1 (]: Began compiling node test.api_snowflake_pipeline.source_unique_RAW_prescriptions_prescription_id.8de4fde4e3
+[0m04:05:58.057477 [debug] [Thread-1 (]: Writing injected SQL for node "test.api_snowflake_pipeline.source_unique_RAW_prescriptions_prescription_id.8de4fde4e3"
+[0m04:05:58.057963 [debug] [Thread-1 (]: Began executing node test.api_snowflake_pipeline.source_unique_RAW_prescriptions_prescription_id.8de4fde4e3
+[0m04:05:58.058510 [debug] [Thread-1 (]: Finished running node test.api_snowflake_pipeline.source_unique_RAW_prescriptions_prescription_id.8de4fde4e3
+[0m04:05:58.058880 [debug] [Thread-1 (]: Began running node test.api_snowflake_pipeline.not_null_appointments_table_appointment_id.ceb82df9f8
+[0m04:05:58.059302 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.api_snowflake_pipeline.source_unique_RAW_prescriptions_prescription_id.8de4fde4e3, now test.api_snowflake_pipeline.not_null_appointments_table_appointment_id.ceb82df9f8)
+[0m04:05:58.059630 [debug] [Thread-1 (]: Began compiling node test.api_snowflake_pipeline.not_null_appointments_table_appointment_id.ceb82df9f8
+[0m04:05:58.062580 [debug] [Thread-1 (]: Writing injected SQL for node "test.api_snowflake_pipeline.not_null_appointments_table_appointment_id.ceb82df9f8"
+[0m04:05:58.063090 [debug] [Thread-1 (]: Began executing node test.api_snowflake_pipeline.not_null_appointments_table_appointment_id.ceb82df9f8
+[0m04:05:58.063656 [debug] [Thread-1 (]: Finished running node test.api_snowflake_pipeline.not_null_appointments_table_appointment_id.ceb82df9f8
+[0m04:05:58.064009 [debug] [Thread-1 (]: Began running node test.api_snowflake_pipeline.not_null_appointments_table_patient_id.95f7362346
+[0m04:05:58.064431 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.api_snowflake_pipeline.not_null_appointments_table_appointment_id.ceb82df9f8, now test.api_snowflake_pipeline.not_null_appointments_table_patient_id.95f7362346)
+[0m04:05:58.064836 [debug] [Thread-1 (]: Began compiling node test.api_snowflake_pipeline.not_null_appointments_table_patient_id.95f7362346
+[0m04:05:58.067862 [debug] [Thread-1 (]: Writing injected SQL for node "test.api_snowflake_pipeline.not_null_appointments_table_patient_id.95f7362346"
+[0m04:05:58.068367 [debug] [Thread-1 (]: Began executing node test.api_snowflake_pipeline.not_null_appointments_table_patient_id.95f7362346
+[0m04:05:58.068927 [debug] [Thread-1 (]: Finished running node test.api_snowflake_pipeline.not_null_appointments_table_patient_id.95f7362346
+[0m04:05:58.069325 [debug] [Thread-1 (]: Began running node test.api_snowflake_pipeline.unique_appointments_table_appointment_id.0292737db4
+[0m04:05:58.069793 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.api_snowflake_pipeline.not_null_appointments_table_patient_id.95f7362346, now test.api_snowflake_pipeline.unique_appointments_table_appointment_id.0292737db4)
+[0m04:05:58.070353 [debug] [Thread-1 (]: Began compiling node test.api_snowflake_pipeline.unique_appointments_table_appointment_id.0292737db4
+[0m04:05:58.073549 [debug] [Thread-1 (]: Writing injected SQL for node "test.api_snowflake_pipeline.unique_appointments_table_appointment_id.0292737db4"
+[0m04:05:58.074026 [debug] [Thread-1 (]: Began executing node test.api_snowflake_pipeline.unique_appointments_table_appointment_id.0292737db4
+[0m04:05:58.074584 [debug] [Thread-1 (]: Finished running node test.api_snowflake_pipeline.unique_appointments_table_appointment_id.0292737db4
+[0m04:05:58.074935 [debug] [Thread-1 (]: Began running node model.api_snowflake_pipeline.myview
+[0m04:05:58.075375 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.api_snowflake_pipeline.unique_appointments_table_appointment_id.0292737db4, now model.api_snowflake_pipeline.myview)
+[0m04:05:58.075700 [debug] [Thread-1 (]: Began compiling node model.api_snowflake_pipeline.myview
+[0m04:05:58.077794 [debug] [Thread-1 (]: Writing injected SQL for node "model.api_snowflake_pipeline.myview"
+[0m04:05:58.078269 [debug] [Thread-1 (]: Began executing node model.api_snowflake_pipeline.myview
+[0m04:05:58.078816 [debug] [Thread-1 (]: Finished running node model.api_snowflake_pipeline.myview
+[0m04:05:58.079182 [debug] [Thread-1 (]: Began running node test.api_snowflake_pipeline.not_null_prescriptions_view_patient_id.ae4275945b
+[0m04:05:58.079608 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.api_snowflake_pipeline.myview, now test.api_snowflake_pipeline.not_null_prescriptions_view_patient_id.ae4275945b)
+[0m04:05:58.079932 [debug] [Thread-1 (]: Began compiling node test.api_snowflake_pipeline.not_null_prescriptions_view_patient_id.ae4275945b
+[0m04:05:58.083257 [debug] [Thread-1 (]: Writing injected SQL for node "test.api_snowflake_pipeline.not_null_prescriptions_view_patient_id.ae4275945b"
+[0m04:05:58.083863 [debug] [Thread-1 (]: Began executing node test.api_snowflake_pipeline.not_null_prescriptions_view_patient_id.ae4275945b
+[0m04:05:58.084467 [debug] [Thread-1 (]: Finished running node test.api_snowflake_pipeline.not_null_prescriptions_view_patient_id.ae4275945b
+[0m04:05:58.084843 [debug] [Thread-1 (]: Began running node test.api_snowflake_pipeline.not_null_prescriptions_view_prescription_id.ee6120ab92
+[0m04:05:58.085314 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.api_snowflake_pipeline.not_null_prescriptions_view_patient_id.ae4275945b, now test.api_snowflake_pipeline.not_null_prescriptions_view_prescription_id.ee6120ab92)
+[0m04:05:58.085650 [debug] [Thread-1 (]: Began compiling node test.api_snowflake_pipeline.not_null_prescriptions_view_prescription_id.ee6120ab92
+[0m04:05:58.090156 [debug] [Thread-1 (]: Writing injected SQL for node "test.api_snowflake_pipeline.not_null_prescriptions_view_prescription_id.ee6120ab92"
+[0m04:05:58.090664 [debug] [Thread-1 (]: Began executing node test.api_snowflake_pipeline.not_null_prescriptions_view_prescription_id.ee6120ab92
+[0m04:05:58.091221 [debug] [Thread-1 (]: Finished running node test.api_snowflake_pipeline.not_null_prescriptions_view_prescription_id.ee6120ab92
+[0m04:05:58.091570 [debug] [Thread-1 (]: Began running node test.api_snowflake_pipeline.unique_prescriptions_view_prescription_id.b0d8176d64
+[0m04:05:58.092007 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.api_snowflake_pipeline.not_null_prescriptions_view_prescription_id.ee6120ab92, now test.api_snowflake_pipeline.unique_prescriptions_view_prescription_id.b0d8176d64)
+[0m04:05:58.092340 [debug] [Thread-1 (]: Began compiling node test.api_snowflake_pipeline.unique_prescriptions_view_prescription_id.b0d8176d64
+[0m04:05:58.095287 [debug] [Thread-1 (]: Writing injected SQL for node "test.api_snowflake_pipeline.unique_prescriptions_view_prescription_id.b0d8176d64"
+[0m04:05:58.095792 [debug] [Thread-1 (]: Began executing node test.api_snowflake_pipeline.unique_prescriptions_view_prescription_id.b0d8176d64
+[0m04:05:58.096419 [debug] [Thread-1 (]: Finished running node test.api_snowflake_pipeline.unique_prescriptions_view_prescription_id.b0d8176d64
+[0m04:05:58.097585 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m04:05:58.097901 [debug] [MainThread]: Connection 'test.api_snowflake_pipeline.unique_prescriptions_view_prescription_id.b0d8176d64' was left open.
+[0m04:05:58.098189 [debug] [MainThread]: On test.api_snowflake_pipeline.unique_prescriptions_view_prescription_id.b0d8176d64: Close
+[0m04:05:58.240657 [debug] [MainThread]: Command end result
+[0m04:05:58.323683 [debug] [MainThread]: Wrote artifact WritableManifest to /root/api_snowflake_pipeline/target/manifest.json
+[0m04:05:58.325215 [debug] [MainThread]: Wrote artifact SemanticManifest to /root/api_snowflake_pipeline/target/semantic_manifest.json
+[0m04:05:58.331817 [debug] [MainThread]: Wrote artifact RunExecutionResult to /root/api_snowflake_pipeline/target/run_results.json
+[0m04:05:58.335913 [debug] [MainThread]: Acquiring new snowflake connection 'generate_catalog'
+[0m04:05:58.336214 [info ] [MainThread]: Building catalog
+[0m04:05:58.346049 [debug] [ThreadPool]: Acquiring new snowflake connection 'MY_DATABASE.information_schema'
+[0m04:05:58.362405 [debug] [ThreadPool]: Using snowflake connection "MY_DATABASE.information_schema"
+[0m04:05:58.363121 [debug] [ThreadPool]: On MY_DATABASE.information_schema: /* {"app": "dbt", "dbt_version": "1.9.6", "profile_name": "api_snowflake_pipeline", "target_name": "dev", "connection_name": "MY_DATABASE.information_schema"} */
+with tables as (
+            select
+        table_catalog as "table_database",
+        table_schema as "table_schema",
+        table_name as "table_name",
+        case
+            when is_dynamic = 'YES' and table_type = 'BASE TABLE' THEN 'DYNAMIC TABLE'
+            else table_type
+        end as "table_type",
+        comment as "table_comment",
+
+        -- note: this is the _role_ that owns the table
+        table_owner as "table_owner",
+
+        'Clustering Key' as "stats:clustering_key:label",
+        clustering_key as "stats:clustering_key:value",
+        'The key used to cluster this table' as "stats:clustering_key:description",
+        (clustering_key is not null) as "stats:clustering_key:include",
+
+        'Row Count' as "stats:row_count:label",
+        row_count as "stats:row_count:value",
+        'An approximate count of rows in this table' as "stats:row_count:description",
+        (row_count is not null) as "stats:row_count:include",
+
+        'Approximate Size' as "stats:bytes:label",
+        bytes as "stats:bytes:value",
+        'Approximate size of the table as reported by Snowflake' as "stats:bytes:description",
+        (bytes is not null) as "stats:bytes:include",
+
+        'Last Modified' as "stats:last_modified:label",
+        to_varchar(convert_timezone('UTC', last_altered), 'yyyy-mm-dd HH24:MI'||'UTC') as "stats:last_modified:value",
+        'The timestamp for last update/change' as "stats:last_modified:description",
+        (last_altered is not null and table_type='BASE TABLE') as "stats:last_modified:include"
+    from MY_DATABASE.INFORMATION_SCHEMA.tables
+            where (
+                (
+                    
+    "table_schema" ilike 'RAW_staging' and upper("table_schema") = upper('RAW_staging')
+
+                    and 
+    "table_name" ilike 'prescription' and upper("table_name") = upper('prescription')
+
+                )
+             or 
+                (
+                    
+    "table_schema" ilike 'RAW_staging' and upper("table_schema") = upper('RAW_staging')
+
+                    and 
+    "table_name" ilike 'patients' and upper("table_name") = upper('patients')
+
+                )
+             or 
+                (
+                    
+    "table_schema" ilike 'RAW' and upper("table_schema") = upper('RAW')
+
+                    and 
+    "table_name" ilike 'prescriptions' and upper("table_name") = upper('prescriptions')
+
+                )
+             or 
+                (
+                    
+    "table_schema" ilike 'RAW_analytics' and upper("table_schema") = upper('RAW_analytics')
+
+                    and 
+    "table_name" ilike 'prescriptions_view' and upper("table_name") = upper('prescriptions_view')
+
+                )
+             or 
+                (
+                    
+    "table_schema" ilike 'RAW_analytics' and upper("table_schema") = upper('RAW_analytics')
+
+                    and 
+    "table_name" ilike 'patients_clean' and upper("table_name") = upper('patients_clean')
+
+                )
+             or 
+                (
+                    
+    "table_schema" ilike 'RAW' and upper("table_schema") = upper('RAW')
+
+                    and 
+    "table_name" ilike 'appointments' and upper("table_name") = upper('appointments')
+
+                )
+             or 
+                (
+                    
+    "table_schema" ilike 'RAW_staging' and upper("table_schema") = upper('RAW_staging')
+
+                    and 
+    "table_name" ilike 'appointments' and upper("table_name") = upper('appointments')
+
+                )
+             or 
+                (
+                    
+    "table_schema" ilike 'RAW_analytics' and upper("table_schema") = upper('RAW_analytics')
+
+                    and 
+    "table_name" ilike 'appointments_table' and upper("table_name") = upper('appointments_table')
+
+                )
+             or 
+                (
+                    
+    "table_schema" ilike 'RAW' and upper("table_schema") = upper('RAW')
+
+                    and 
+    "table_name" ilike 'my_table' and upper("table_name") = upper('my_table')
+
+                )
+             or 
+                (
+                    
+    "table_schema" ilike 'RAW' and upper("table_schema") = upper('RAW')
+
+                    and 
+    "table_name" ilike 'example_model' and upper("table_name") = upper('example_model')
+
+                )
+             or 
+                (
+                    
+    "table_schema" ilike 'RAW' and upper("table_schema") = upper('RAW')
+
+                    and 
+    "table_name" ilike 'myview' and upper("table_name") = upper('myview')
+
+                )
+             or 
+                (
+                    
+    "table_schema" ilike 'RAW' and upper("table_schema") = upper('RAW')
+
+                    and 
+    "table_name" ilike 'patients' and upper("table_name") = upper('patients')
+
+                )
+            )
+        ),
+        columns as (
+            select
+        table_catalog as "table_database",
+        table_schema as "table_schema",
+        table_name as "table_name",
+
+        column_name as "column_name",
+        ordinal_position as "column_index",
+        data_type as "column_type",
+        comment as "column_comment"
+    from MY_DATABASE.INFORMATION_SCHEMA.columns
+            where (
+                (
+                    
+    "table_schema" ilike 'RAW_staging' and upper("table_schema") = upper('RAW_staging')
+
+                    and 
+    "table_name" ilike 'prescription' and upper("table_name") = upper('prescription')
+
+                )
+             or 
+                (
+                    
+    "table_schema" ilike 'RAW_staging' and upper("table_schema") = upper('RAW_staging')
+
+                    and 
+    "table_name" ilike 'patients' and upper("table_name") = upper('patients')
+
+                )
+             or 
+                (
+                    
+    "table_schema" ilike 'RAW' and upper("table_schema") = upper('RAW')
+
+                    and 
+    "table_name" ilike 'prescriptions' and upper("table_name") = upper('prescriptions')
+
+                )
+             or 
+                (
+                    
+    "table_schema" ilike 'RAW_analytics' and upper("table_schema") = upper('RAW_analytics')
+
+                    and 
+    "table_name" ilike 'prescriptions_view' and upper("table_name") = upper('prescriptions_view')
+
+                )
+             or 
+                (
+                    
+    "table_schema" ilike 'RAW_analytics' and upper("table_schema") = upper('RAW_analytics')
+
+                    and 
+    "table_name" ilike 'patients_clean' and upper("table_name") = upper('patients_clean')
+
+                )
+             or 
+                (
+                    
+    "table_schema" ilike 'RAW' and upper("table_schema") = upper('RAW')
+
+                    and 
+    "table_name" ilike 'appointments' and upper("table_name") = upper('appointments')
+
+                )
+             or 
+                (
+                    
+    "table_schema" ilike 'RAW_staging' and upper("table_schema") = upper('RAW_staging')
+
+                    and 
+    "table_name" ilike 'appointments' and upper("table_name") = upper('appointments')
+
+                )
+             or 
+                (
+                    
+    "table_schema" ilike 'RAW_analytics' and upper("table_schema") = upper('RAW_analytics')
+
+                    and 
+    "table_name" ilike 'appointments_table' and upper("table_name") = upper('appointments_table')
+
+                )
+             or 
+                (
+                    
+    "table_schema" ilike 'RAW' and upper("table_schema") = upper('RAW')
+
+                    and 
+    "table_name" ilike 'my_table' and upper("table_name") = upper('my_table')
+
+                )
+             or 
+                (
+                    
+    "table_schema" ilike 'RAW' and upper("table_schema") = upper('RAW')
+
+                    and 
+    "table_name" ilike 'example_model' and upper("table_name") = upper('example_model')
+
+                )
+             or 
+                (
+                    
+    "table_schema" ilike 'RAW' and upper("table_schema") = upper('RAW')
+
+                    and 
+    "table_name" ilike 'myview' and upper("table_name") = upper('myview')
+
+                )
+             or 
+                (
+                    
+    "table_schema" ilike 'RAW' and upper("table_schema") = upper('RAW')
+
+                    and 
+    "table_name" ilike 'patients' and upper("table_name") = upper('patients')
+
+                )
+            )
+        )
+        select *
+    from tables
+    join columns using ("table_database", "table_schema", "table_name")
+    order by "column_index"
+[0m04:05:58.363666 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m04:06:03.072552 [debug] [ThreadPool]: SQL status: SUCCESS 74 in 4.709 seconds
+[0m04:06:03.099993 [debug] [MainThread]: Wrote artifact CatalogArtifact to /root/api_snowflake_pipeline/target/catalog.json
+[0m04:06:03.121374 [debug] [MainThread]: Wrote artifact WritableManifest to /root/api_snowflake_pipeline/target/manifest.json
+[0m04:06:03.122998 [debug] [MainThread]: Wrote artifact SemanticManifest to /root/api_snowflake_pipeline/target/semantic_manifest.json
+[0m04:06:03.123322 [info ] [MainThread]: Catalog written to /root/api_snowflake_pipeline/target/catalog.json
+[0m04:06:03.124426 [debug] [MainThread]: Resource report: {"command_name": "generate", "command_success": true, "command_wall_clock_time": 8.01181, "process_in_blocks": "0", "process_kernel_time": 1.414856, "process_mem_max_rss": "216336", "process_out_blocks": "5936", "process_user_time": 2.21421}
+[0m04:06:03.124858 [debug] [MainThread]: Command `dbt docs generate` succeeded at 04:06:03.124779 after 8.01 seconds
+[0m04:06:03.125173 [debug] [MainThread]: Connection 'generate_catalog' was properly closed.
+[0m04:06:03.125406 [debug] [MainThread]: Connection 'MY_DATABASE.information_schema' was left open.
+[0m04:06:03.125643 [debug] [MainThread]: On MY_DATABASE.information_schema: Close
+[0m04:06:03.251310 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x773df64737f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x773df569fb80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x773df5d22290>]}
+[0m04:06:03.251833 [debug] [MainThread]: Flushing usage events
+[0m04:06:03.479800 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m04:07:54.740967 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7a1b28f7f8b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7a1b27ffc5b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7a1b27ffc610>]}
+
+
+============================== 04:07:54.743307 | df8e1f61-2039-4c83-9460-9ca64d3bdef0 ==============================
+[0m04:07:54.743307 [info ] [MainThread]: Running with dbt=1.9.6
+[0m04:07:54.743745 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/root/.dbt', 'debug': 'False', 'fail_fast': 'False', 'log_path': '/root/api_snowflake_pipeline/logs', 'version_check': 'True', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'log_format': 'default', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'target_path': 'None', 'invocation_command': 'dbt docs serve', 'send_anonymous_usage_stats': 'True'}
+[0m04:07:55.290019 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'df8e1f61-2039-4c83-9460-9ca64d3bdef0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7a1b27ffc520>]}
+[0m04:07:55.333485 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'df8e1f61-2039-4c83-9460-9ca64d3bdef0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7a1b27fd47c0>]}
+[0m04:14:29.773109 [error] [MainThread]: Encountered an error:
+
+[0m04:14:29.778458 [error] [MainThread]: Traceback (most recent call last):
+  File "/root/api_snowflake_pipeline/venv/lib/python3.10/site-packages/dbt/cli/requires.py", line 153, in wrapper
+    result, success = func(*args, **kwargs)
+  File "/root/api_snowflake_pipeline/venv/lib/python3.10/site-packages/dbt/cli/requires.py", line 103, in wrapper
+    return func(*args, **kwargs)
+  File "/root/api_snowflake_pipeline/venv/lib/python3.10/site-packages/dbt/cli/requires.py", line 235, in wrapper
+    return func(*args, **kwargs)
+  File "/root/api_snowflake_pipeline/venv/lib/python3.10/site-packages/dbt/cli/requires.py", line 264, in wrapper
+    return func(*args, **kwargs)
+  File "/root/api_snowflake_pipeline/venv/lib/python3.10/site-packages/dbt/cli/requires.py", line 311, in wrapper
+    return func(*args, **kwargs)
+  File "/root/api_snowflake_pipeline/venv/lib/python3.10/site-packages/dbt/cli/main.py", line 301, in docs_serve
+    results = task.run()
+  File "/root/api_snowflake_pipeline/venv/lib/python3.10/site-packages/dbt/task/docs/serve.py", line 29, in run
+    httpd.serve_forever()
+  File "/usr/lib/python3.10/socketserver.py", line 232, in serve_forever
+    ready = selector.select(poll_interval)
+  File "/usr/lib/python3.10/selectors.py", line 416, in select
+    fd_event_list = self._selector.poll(timeout)
+KeyboardInterrupt
+
+[0m04:14:29.780028 [debug] [MainThread]: Resource report: {"command_name": "serve", "command_success": false, "command_wall_clock_time": 395.07944, "process_in_blocks": "480", "process_kernel_time": 1.400412, "process_mem_max_rss": "194036", "process_out_blocks": "3368", "process_user_time": 1.614035}
+[0m04:14:29.780740 [debug] [MainThread]: Command `dbt docs serve` failed at 04:14:29.780638 after 395.08 seconds
+[0m04:14:29.781102 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7a1b28f7f8b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7a1af219ae60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7a1af1ff2890>]}
+[0m04:14:29.781491 [debug] [MainThread]: Flushing usage events
+[0m04:14:30.218066 [debug] [MainThread]: An error was encountered while trying to flush usage events
